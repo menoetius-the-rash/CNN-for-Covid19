@@ -106,7 +106,27 @@ Considering the contents of confusion matrices, train and validation loss graphs
 - Basic CNN-Adam, AlexNet-SGD,  and AlexNet-Adam with DA performed well with regards to sensitivity, specificity, and accuracy.
      Upon evaluating the results generated from the models, it was noted that the AlexNet-Adam with data augmentation model was deemed the recommended model. The model was notably a top performer based on the graphs and table above. With regards to using data augmentation, batch normalization, dropouts to avoid overfitting,  training and validation loss graph, confusion matrix and metrics, the AlexNet-Adam with DA data augmentation model is the chosen model.
 
+## Future Work
 
+  Although the obtained results were very satisfactory, with the AlexNet with Adam Optimizer and Data Augmentation performing over 99% in all considered parameters, a list of improvements can be considered when tackling future work that could improve the prediction capabilities of the current model. 
+  
+###	The utilization of a larger dataset
 
+A larger dataset can assist on reconfirming that the obtained results were actually accurate or if the results were skewed due to lack of data. Even with the utilization of the data augmentation that artificially increases the size of the dataset, more data would ensure that the obtained results were not affected by lack of data. The utilized dataset was by no means small, with some of the presented literature works analysed containing if not similar sized datasets, smaller ones, but when talking about training machine learning algorithms, the more, the merrier.
+
+###	Image Enhancement techniques
+
+The higher numbers obtained in this project could be due to lack of distinction on the X-Rays, which lead to a misclassification by the convolutional network algorithm. As a possible solution, data enhancement techniques could assist the classification process by making the images sharper, or by isolating the affected areas, so only those points would be taken into consideration.
+
+###	Review Class imbalance
+
+The utilized dataset does contain a class imbalance that, although not greatly disproportional, might be affecting the classification of the models. In future works, dealing with this class imbalance, maybe associated with a larger dataset so the model does not suffer for lack of data in case or undersampling, could be an assurance to guarantee that the model is performing in peak conditions.
+
+###	Transfer learning techniques
+
+The utilization of transfer learning could be another improvement for the current dataset classification. The utilization of the current techniques on a larger dataset initially could create a transfer learning model to be applied on this one or even the current implemented model could be used as a basis for future work utilizing transfer learning to create pre-weighted features to be used on the classification models.
+###	DarkCovidNet conversion to TensorFlow
+
+Considering how relevant in the literature review the DarkCovidNet was for the initial COVID-19 classification models, the technical difficulties related to the Pytorch native coding of it did not enable the full exploration of the model with the data augmentation techniques, so future work could dedicate more time into the conversion of the Pytorch code into the TensorFlow, since this would also ensure that all steps of the code implementation are in par for all models.
 
 
